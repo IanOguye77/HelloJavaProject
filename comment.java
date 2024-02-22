@@ -18,7 +18,15 @@ public class comment {
 
 
         System.out.println("3. We use /** */ for javadoc comment style");
+    }
 
-
+    /**
+     *
+     * @param x
+     * @param y
+     * @return
+     */
+    public static int add(int x, int y){
+        return (x + y);
     }
 }
