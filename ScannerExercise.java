@@ -69,6 +69,7 @@ public class ScannerExercise {
                 ("==============================================");
 
         // close the scanner object
+        sc.close();
 
 
     }   }
