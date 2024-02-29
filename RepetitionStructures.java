@@ -77,12 +77,12 @@ public class RepetitionStructures {
         } while (q <= 50);
         System.out.println("==================================================");
         // Output 50 45 40 35 30 25 20 15 10 5 0
-       // int w = 50;
-       // do{
-       //     System.out.println(w);
-       //     w = w - 5;
-       // } while (w );
-       // System.out.println("==================================================");
+        int w = 50;
+        do{
+            System.out.println(w);
+            w = w - 5;
+        } while (w != -5 );
+        System.out.println("==================================================");
 
     }
 }
