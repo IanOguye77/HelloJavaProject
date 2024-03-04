@@ -1,4 +1,7 @@
-public class javaArray {
+import java.io.*;
+import java.util.Scanner;
+
+public class javaArray {;
     /**
      * Java Arrays
      *
@@ -60,7 +63,7 @@ public class javaArray {
         // The statement above declares and instantiate an array of integers with five elements (initialized to the values 1, 2, 3, 4, and 5)
 
         // boolean array
-        boolean[] results = { true, false, true, false };
+        boolean[] results = {true, false, true, false};
 
         // double array
         double[] grades = {100, 90, 80, 75};
@@ -81,6 +84,157 @@ public class javaArray {
         ages[0] = 10;
 
         // prints the last element in an array
-        System.out.println(ages[0]);
+        System.out.println(ages[99]);
+
+        // NOTE: Once an array is declared and constructed, the store value of each member of the array will be initialized to zero for number data type.
+        // For Reference data types like String, they are NOT initialized to blanks or an empty string "". Therefore, you must populate the string array explicitly.
+
+        // Example
+        // The following is a sample code on how to print all the elements in the array. It uses a for loop -> print all the elements of ages[]
+
+        for (int h = 0; h < ages.length; h++) {
+            System.out.println(ages[h]);
+        }
+
+        // Write a java program that will ask the user to enter 5 student names and store them in an array. Then output all the names using a for loop
+
+        // Create a scanner
+        Scanner sc = new Scanner(System.in);
+
+        // create an empty array to store the 5 names
+        String[] studentNames = new String[5];
+
+        // Prompt the user to enter the 5 names
+
+        for (int idx = 0; idx < studentNames.length; idx++) {
+            System.out.println("Enter the name of students " + (idx + 1) + " ");
+            studentNames[idx] = sc.next();
+        }
+        System.out.println("==================================================");
+
+
+        // output the names
+        for (int l = 0; l < studentNames.length; l++) {
+            System.out.println(studentNames[l]);
+        }
+        System.out.println("==================================================");
+
+        // Array Length
+        // Inorder to get the number of elements in ana array, you can use the length field of an array.
+        // The length field returns the size of the array.
+        // It can be used by writing the following
+        // arrayName.length.
+        // Example
+        System.out.println(studentNames.length);
+        System.out.println("==================================================");
+
+        // Create a program that asks a user for 5 integers and then prints out their sum and average
+
+        // prompt the user to enter 5 numbers
+        int[] integer = new int[5];
+        for (int noEntered = 0; noEntered < integer.length; noEntered++) {
+            System.out.println("Enter integer " + (noEntered + 1) + ":");
+            integer[noEntered] = sc.nextInt();
+        }
+
+        // Finding total sum
+        int sum = 0;
+        int average = 0;
+        // Finding the average
+        // Average = total/number of integer
+        System.out.println("==================================================");
+        for (int b = 0; b < integer.length; b++) {
+            sum = sum + integer[b];
+        }
+
+        // compute the average
+        average = sum / integer.length;
+
+        // output the sum and average
+        System.out.println("The Sum of the 5 integers is: " + sum);
+        System.out.println("The Average of the 5 integers is: " + average);
+
+        System.out.println("==================================================");
+
+        // Multi-Dimensional Array
+        // Are implemented as arrays of arrays
+        // They are declared by appending the appropriate number of bracket pairs after the array name.
+        // syntax: 2-D (Array)
+        // type[][] array.name = new type[row][column];
+
+        // Example:
+        // a 2D integer (512 x 128)
+        int[][] twoD = new int[512][128];
+
+        // a 3D Array (8 x 16 x 24)
+        char[][][] threeD = new char[8][16][24];
+
+        // a 2D String Array
+        String[][] dogNames = {
+                {"Terry", "brown"},
+                {"Kristin", "white"},
+                {"Toby", "gray"},
+                {"Fido", "black"}
+        };
+
+        // Accessing elements of a multidimensional array
+        // To access an element in a multidimensional array is just the same as accessing the elements in a one dimensional array.
+        // For example
+        // To access the first element in the first row o the array dogNames, we write the following
+
+        System.out.println(dogNames[0][0]);
+        // This will print the String "Terry" on the screen
+        System.out.println("==================================================");
+
+        // Challenge
+        // Create a java program to track grades of students against multiple subjects using a 2D array. Implement the following functionalities to:
+        // -> input grades for each student in each subject
+        // -> calculate and display the average for each student
+        // -> calculate and display the average for each subject
+
+        // create a variable to store number of students and number of subjects
+        int numStudents;
+        int numSubjects;
+
+        // Prompt the user for the numbers and store them in their appropriate arrays
+        System.out.println("Enter Number of Students: ");
+        numStudents = sc.nextInt();
+
+        System.out.println("Enter Number of Subjects: ");
+        numSubjects = sc.nextInt();
+        // Create an array to store grades
+        int[][] studentGrades = new int[numStudents][numSubjects];
+        // input grades (using nested for loops)
+        for (int i = 0; i < numStudents; i++) {
+            System.out.println("Enter Grades for " + (i + 1) + ": ");
+            for (int j = 0; j < numSubjects; j++) {
+                System.out.println("Enter Grades for Subject " + (j + 1) + ": ");
+                studentGrades[i][j] = sc.nextInt();
+            }
+        }
+        // calculate the average grade for each student and output it
+        for (int i = 0; i < numStudents; i++) {
+           int total = 0;
+            for (int j = 0; j < numSubjects; j++) {
+                total += studentGrades[i][j];
+            }
+
+            // create a variable for the average grade
+            double averageStudent = (double) total / numSubjects;
+            // output the average
+            System.out.println("Average Grade for Student: " + (i + 1) + ": " + averageStudent);
+        }
+        // calculate the average grade for each subject and output it
+        for (int j = 0; j < numSubjects; j++){
+           int total = 0;
+            for(int i = 0; i < numSubjects; i++){
+                total += studentGrades[i][j];
+            }
+            double averageStudent = (double) total / numSubjects;
+            System.out.println("Average Grade for Subject: " + (j + 1) + ": " + averageStudent);
+
+        }
+
+
     }
 }
