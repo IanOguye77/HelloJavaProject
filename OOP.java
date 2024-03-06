@@ -168,4 +168,101 @@ public class OOP {
     // -> return types can be different or the same
 
     // add two methods in StudentRecord class
+
+    // Constructors
+    // Constructor Methods
+    // Constructors are important in instantiating an object.
+    // It is a method where all the initialization  are placed
+    // The following are properties of a constructor
+    // -> Constructor have the same name as the class
+    // A constructor is just like an ordinary method, however only the following information can be place inside the header of a constructor.
+    // -> Scope or accessibility identifier (like public...), constructor's name and parameters if it has any.
+    // -> Constructors does not have any return value
+    // You cannot call a constructor directly, it can only be called by using the "new" operator during class instantiation.
+
+    // To declare a constructor, we write
+    // <modifier> <className> (<parameter(s)) {
+    //      <statement>*
+    // }
+
+
+    // Default Constructor (Method)
+    // The default constructor (no-arg constructor)
+    // -> is the constructor without any parameters
+    // if the class does not specify any constructors, then an implicit constructor is created.
+
+    // Example of a default constructor
+
+    //public Student(){
+        // some code here
+    // }
+
+
+    // Overloading Constructor Methods
+    //public Student(){
+        // some code here
+    // }
+
+    //public Student(String temp){
+        // this.name = temp;
+    // }
+
+    //public Student(String name, String address){
+        // this.name = name;
+        // this address = address;
+    // }
+
+    //public Student(double mGrade, double eGrade, double sGrade){
+        // mathGrade = mGrade;
+        // englishGrade = eGrade;
+        // scienceGrade = sGrade;
+    // }
+
+    // This() constructor call
+    // constructor calls can be chained, meaning, you can call another constructor from inside another constructor
+    // we can use this() call for this
+    // There are few things to remember when using the this() constructor call
+    // -> when using the this() constructor call, IT MUST OCCUR AS THE FIRST STATEMENT in a constructor
+    // -> It can ONLY BE USED IN A CONSTRUCTOR DEFINITION. The this() call can be followed by any other relevant statements
+
+    // This Reference
+    // The "this" reference refers to current object instance itself.
+    // used to access the instance variables shadowed by the parameters
+    // To use "this" reference, we type,
+   // this.<nameOfInstanceVariable>
+    // You can only use "this" reference for instance variables and NOT static or class variables
+
+    // Access modifiers
+    // There are four different types of member access modifiers in java:
+    // i. Public (least restrictive)
+    // ii. Protected
+    // iii. Default
+    // iv. Private (most restrictive)
+
+    // The first three access modifiers are explicitly written in the code to indicate the access type, for the 3rd one "default", no keyword is used.
+
+    // i. Public accessibility
+    // Specifies that class members (variables or members) are accessible to anyone, both inside and outside the class and outside the package
+    // Any object that interacts with the class can have access to the public mamebers of the class
+    // keyword: public
+    // example: public int userAge;, public String userName;
+
+    // ii. Protected accessibility
+    // Specifies that the class members are accessible only to methods in that class and the subclasses of the class.
+    // The subclass can be in different packages
+    // keyword: protected
+    // Example: protected String name;
+
+    // iii. Default accessibility
+    // specifies that only classes in the same packages can have access to the class variables and methods
+    // nk actual keyword for the default modifier - it is applied in the absence of an access modifier
+    // Example: String name;
+
+    // iv. Private accessibility
+    // specifies that the class members are only accessible by the class they are defined in.
+    // keyword: private
+    // example: private int accountNumber;
+
+    // NB:
+    //The instance variable of a class should normally be declared "private", and the class will just provide accessor and mutator methods to these variables.
 }

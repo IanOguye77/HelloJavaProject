@@ -6,15 +6,6 @@ public class Main {
         StudentRecord dennisRecord = new StudentRecord();
         StudentRecord muznaRecord = new StudentRecord();
 
-        //
-        StudentRecord eGradeRecord = new StudentRecord();
-        StudentRecord mGradeRecord = new StudentRecord();
-        StudentRecord sGradeRecord = new StudentRecord();
-
-
-
-
-
         // set the names of the students
         ianRecord.setName("Ian");
         dennisRecord.setName("Dennis");
@@ -41,6 +32,21 @@ public class Main {
         System.out.println("Year: " + CarRecord.getYear());
         System.out.println("Color: " + CarRecord.getColor());
         System.out.println("Price: $" + CarRecord.getPrice());
+
+        System.out.println("=================================");
+
+        // set info for student1
+        ianRecord.setAddress("Nairobi");
+        ianRecord.setAge(20);
+        ianRecord.setMathGrade(100);
+        ianRecord.setEnglishGrade(90);
+        ianRecord.setScienceGrade(95);
+
+        // overloaded methods
+        ianRecord.print(ianRecord.getName());
+        ianRecord.print(ianRecord.getMathGrade(), ianRecord.getEnglishGrade(), ianRecord.getScienceGrade());
+
+        System.out.println("=================================");
     }
 
 }
