@@ -10,6 +10,7 @@ public class StudentRecord {
     private double average;
     private static int count;
 
+
     // static/class variable(s)
     private static int studentCount;
 
@@ -57,7 +58,6 @@ public class StudentRecord {
     public String getAddress() {
         return address;
     }
-
     public void setMathGrade(double MathGrade) {
         mathGrade = MathGrade;
     }
@@ -70,16 +70,23 @@ public class StudentRecord {
     public double getEnglishGrade(){
         return englishGrade;
     }
-
     public void setScienceGrade(double ScienceGrade) {
         scienceGrade = ScienceGrade;
     }
-
     public double getScienceGrade() {
         return scienceGrade;
     }
 
+    public void print(String temp){
+        System.out.println("Name: " + name);
+        System.out.println("Address: " + address);
+        System.out.println("Age: " + age);
+    }
 
-    // we'll add more cade here
-
+    public void print(double eGrade, double mGrade, double sGrade){
+        System.out.println("Name: " + name);
+        System.out.println("Math Grade: " + mGrade);
+        System.out.println("English Grade: " + eGrade);
+        System.out.println("Science Grade: " + sGrade);
+    }
 }

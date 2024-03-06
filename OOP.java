@@ -157,4 +157,15 @@ public class OOP {
     // i. Method names should start with a small letter
     // ii. Method names should be verbs
     // iii. Always provide documentation before the declaration of the method. You can use javadocs style for this.
+
+    // Overloading Methods
+    // Method overloading allows a method with the same name but different parameters, to have different implementation and return values of different types.
+    // Can be used when the same operations has different implementations.
+
+    // Always remember that overloaded methods have the following properties:
+    // -> the same method name
+    // -> different parameter or different number of parameters
+    // -> return types can be different or the same
+
+    // add two methods in StudentRecord class
 }
